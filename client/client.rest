@@ -1,0 +1,43 @@
+GET http://localhost:3000/producto
+
+###
+
+GET http://localhost:3000/categorias
+
+###
+
+POST http://localhost:3000/producto
+Content-Type: application/json
+
+{
+    "nombre": "aaaaaaaaaaaa",
+    "descripcion":"bbbbbbbbbbbbbbbb",
+    "cantidad":22,
+    "precio": 11,
+    "id_estante": 1,
+    "id_categoria":1 
+}
+
+###
+
+DELETE  http://localhost:3000/producto
+Content-Type: application/json
+
+{
+    "id":1
+}
+
+###
+
+PUT http://localhost:3000/producto
+Content-Type: application/json
+
+{   
+    "id":2,
+    "nombre": "33333333333333333",
+    "descripcion":"333333333333333333333333333",
+    "cantidad":333,
+    "precio": 333
+}
+
+###

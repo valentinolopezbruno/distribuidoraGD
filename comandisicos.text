@@ -1,0 +1,27 @@
+npx prisma db pull ----> para generar migracion
+
+
+DATABASE_URL="postgres://postgres:admin@localhost:5432/distribuidora?"
+
+
+
+docker
+
+docker run -d --rm --name postgres -e POSTGRES_PASSWORD=admin -p 5432:5432 postgres
+
+docker exec -it postgres psql -U postgres
+
+docker cp distribuidora.sql postgres:.
+
+docker cp distribuidoraValue.sql postgres:.
+
+docker exec -it postgres psql -U postgres
+
+\i distribuidora.sql
+
+\i distribuidoraValue.sql
+
+
+
+
+
